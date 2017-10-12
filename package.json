@@ -1,0 +1,42 @@
+{
+  "name": "react-fancy-lib",
+  "version": "0.0.1",
+  "description": "fancy react component library",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": ["./setupTests.js"]
+  },
+  "author": {
+    "name": "Your name",
+    "email": "your email"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
+  }
+}
