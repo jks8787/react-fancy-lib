@@ -1,0 +1,55 @@
+// customize bulma
+@import './colors.scss';
+
+// import bulma
+@import './node_modules/bulma/bulma.sass';
+
+// general styles
+html {
+  background-color: violet;
+}
+
+// breakpoints
+@import './breakpoints.scss';
+
+// utlilty sytles
+.page {
+  @include bp(large-screen){
+    width: 85vw;
+  }
+  @include bp(big-screen){
+    width: 85vw;
+  }
+  @include bp(tab){
+    width: 90vw;
+  }
+  @include bp(tab-portrait){
+    width: 90vw;
+  }
+  @include bp(extra-small-landscape){
+    width: 100vw;
+  }
+  @include bp(small-portrait){
+    width: 100vw;
+  }
+}
+
+.page-font-scale {
+  @include bp(tab){
+    font-size: 0.75rem;
+  }
+  @include bp(tab-portrait){
+    font-size: 0.75rem;
+  }
+  @include bp(extra-small-landscape){
+    font-size: 0.35rem;
+  }
+  @include bp(small-portrait){
+    font-size: 0.25rem;
+  }
+}
+
+// element component styles here
+@import "../elements/Button/Button.scss";
+
+// component styles here

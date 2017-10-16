@@ -7,6 +7,6 @@ describe('Button', function() {
   });
 
   it('should have text', function() {
-    expect(shallow(<Button />).text()).toEqual('i am a button - who is fancy');
+    expect(shallow(<Button />).text()).toEqual('i am a button');
   });
 });

@@ -1,0 +1,119 @@
+// https://codepen.io/gbhasha/pen/iaIsJ
+$media-queries: true;
+
+@mixin bp($point) {
+  @if ($media-queries) {
+    $bp-large-screen: 1824px;
+    $bp-bigscreen: 1824px;
+    $bp-tab-max: 1024px;
+    $bp-tab-min: 768px;
+    $bp-extra-small-max: 568px;
+    $bp-small-max: 480px;
+    $bp-small-min: 320px;
+    // **
+    // --------------------
+    // Options of screen breakpoints:
+    // 1. large-screen - from 1824px
+    // 2. big-screen - to 1824px
+    // 3. tab-mini - to 758px
+    // 4. tab - from 758px to 1024px
+    // 5. tab-portrait - to 758px
+    // 6. extra-small-landscape - to 568px
+    // 7. small - from 320px to 480px
+    // 8. small-portrait - to 320px
+    // --------------------
+    // **
+    @if $point == large-screen {
+      @media // Very Large Screens
+      only screen and (min-width: #{$bp-large-screen}),
+      only screen and (min-device-width: #{$bp-large-screen}) {
+        @content;
+      }
+    }
+    @if $point == big-screen {
+      @media // Desktops and Laptops
+      only screen and (max-width: #{$bp-bigscreen}),
+      only screen and (max-device-width: #{$bp-bigscreen}) {
+        @content;
+      }
+    }
+    @if $point == tab-mini {
+      @media // iPad-Mini (portrait and landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 1),
+      only screen and (max-width: #{$bp-tab-min}){
+        @content;
+      }
+    }
+    @if $point == tab {
+      @media // iPad (portrait and landscape)
+      handheld,
+      only screen and (max-width: #{$bp-tab-max})
+                  and (min-width: #{$bp-extra-small-max}) {
+        @content;
+      }
+    }
+    @if $point == tab-portrait {
+      @media // iPad (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-tab-min})
+                  and (orientation: portrait) {
+        @content;
+      }
+    }
+    @if $point == extra-small-landscape {
+      @media // iPhone 5 (landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-extra-small-max}) {
+        @content;
+      }
+    }
+    @if $point == small {
+      @media // iPhone (portrait and landscape)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-small-max})
+                  and (min-width: #{$bp-small-min}) {
+        @content;
+      }
+    }
+    @if $point == small-portrait {
+      @media // iPhone (portrait)
+      handheld,
+      only screen and (min-device-pixel-ratio: 2),
+      only screen and (max-width: #{$bp-small-min}) {
+        @content;
+      }
+    }
+  }
+}
+
+
+// .example {
+//   @include bp(large-screen){
+//     background: blue;
+//   }
+//   @include bp(big-screen){
+//     background: navy;
+//   }
+//   @include bp(tab){
+//     background: brown;
+//   }
+//   @include bp(tab-portrait){
+//     background: black;
+//   }
+//   @include bp(extra-small-landscape){
+//     background: green;
+//   }
+//   @include bp(small){
+//     background: yellow;
+//   }
+//   @include bp(small-portrait){
+//     background: pink;
+//   }
+//   width: 100%;
+//   height: 100px;
+//   background-color: red;
+// }
