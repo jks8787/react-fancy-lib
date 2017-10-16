@@ -25,6 +25,7 @@
     "name": "Janice Smith",
     "email": "janice.k.n.smith@gmail.com"
   },
+  "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^7.1.5",
     "babel-cli": "^6.26.0",
