@@ -1,12 +1,12 @@
-// customize bulma
+// customize bulma by setting color variables here to overrride bulma colors
 @import './colors.scss';
 
 // import bulma
-@import './node_modules/bulma/bulma.sass';
+@import '~bulma/bulma.sass';
 
 // general styles
 html {
-  background-color: violet;
+  background-color: $white;
 }
 
 // breakpoints
