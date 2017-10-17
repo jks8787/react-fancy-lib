@@ -13,12 +13,16 @@
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack --config webpack.config.js --color -p --progress",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "jest": {
     "verbose": true,
     "setupFiles": [
       "./setupTests.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/**/*.{js}",
+      "!src/index.js"
     ]
   },
   "author": {
