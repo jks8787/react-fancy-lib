@@ -1,0 +1,23 @@
+@import '../../../styles/colors.scss';
+
+.modal-component  {
+  .modal-component__content-body {
+      display: flex;
+      justify-content: center;
+      padding: 3rem;
+    }
+
+    .modal-component__content-lines-wrap {
+      text-align: center;
+    }
+
+    .modal-component__content-line {
+      margin-bottom: 0.25rem;
+    }
+
+    .modal-component__content-link {
+      margin-top: 2rem;
+      padding-left: 25%;
+      padding-right: 25%;
+    }
+}
